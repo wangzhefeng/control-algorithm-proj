@@ -1,12 +1,13 @@
-[project]
+﻿[project]
 name = "control-algorithm-proj"
 version = "0.1.0"
-description = "Add your description here"
+description = "Control algorithm learning project with PID demos and state-space examples"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "matplotlib>=3.10.8",
     "numpy>=2.4.3",
-    "pandas>=3.0.1",
+    "scipy>=1.17.1",
 ]
 
 [dependency-groups]
@@ -15,3 +16,4 @@ dev = [
     "pytest>=9.0.2",
     "ruff>=0.15.5",
 ]
+
