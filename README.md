@@ -1,10 +1,10 @@
 ﻿# Control Algorithm Project
 
-用于学习控制算法（当前聚焦 PID、状态空间与耦合系统示例）的实验仓库。
+用于学习控制算法（当前聚焦 PID、MPC 与 LQR 示例）的实验仓库。
 
 ## 项目目标
 
-- 梳理并运行 `src` 中的 PID 控制算法示例代码。
+- 梳理并运行 `src` 中的控制算法示例代码。
 - 修复示例中的可运行性问题，沉淀可复现的实验步骤。
 - 建立清晰的项目结构，方便后续持续扩展。
 
@@ -45,6 +45,8 @@ uv run python <script.py>
 - `numpy`
 - `matplotlib`
 - `scipy`
+- `cvxpy`
+- `casadi`
 
 依赖定义见 [pyproject.toml](E:\control-algorithm-proj\pyproject.toml) 与 [uv.lock](E:\control-algorithm-proj\uv.lock)。
 
@@ -56,6 +58,17 @@ uv run python <script.py>
 
 ```text
 src
+|- lqr
+|  |- ilqr_unicycle_demo.py
+|  |- lqr_regulator_discrete_demo.py
+|  |- lqr_tracking_incremental_demo.py
+|  `- README.md
+|- mpc
+|  |- linear_mpc_qp_demo.py
+|  |- linear_mpc_tracking_demo.py
+|  |- nonlinear_mpc_casadi_demo.py
+|  |- nmpc_unicycle_tracking_demo.py
+|  `- README.md
 `- pid
    |- basic
    |  `- pid_demo.py
@@ -75,6 +88,10 @@ src
   - 状态空间建模与 PID 控制示例（Python + Matlab）。
 - `src/pid/coupled_systems`
   - 耦合系统 PID 控制示例（Python + Matlab）。
+- `src/mpc`
+  - 模型预测控制（MPC / NMPC）学习示例与说明文档。
+- `src/lqr`
+  - 线性二次调节（LQR / iLQR）学习示例与说明文档。
 
 ### 运行建议
 
@@ -82,10 +99,12 @@ src
   - `uv run python src/pid/basic/pid_demo.py`
   - `uv run python src/pid/state_space/pid_state_space_demo.py`
   - `uv run python src/pid/coupled_systems/pid_coupled_systems_demo.py`
+  - `uv run python src/mpc/linear_mpc_qp_demo.py --no-show --save-fig`
+  - `uv run python src/lqr/lqr_regulator_discrete_demo.py --no-show --save-fig`
 
 ### 已知问题
 
-- GUI 示例依赖 Tkinter 图形环境，部分无界面环境下无法直接显示窗口。
+- GUI 示例依赖图形环境，部分无界面环境下无法直接显示窗口。
 - 目前缺少面向数值结果的自动化回归测试。
 
 ## 与 Codex 协作
@@ -99,5 +118,5 @@ src
 ## 当前状态与后续建议
 
 - 当前已完成项目结构层面的基础整理（目录、说明、依赖、算法分类）。
-- 后续建议优先补充 `src/pid` 目录下示例的自动化测试（非 GUI 部分）。
+- 后续建议补充 `src/pid`、`src/mpc`、`src/lqr` 目录下示例的自动化测试（非 GUI 部分）。
 - 今后项目内容更新统一维护在根目录 `README.md`。

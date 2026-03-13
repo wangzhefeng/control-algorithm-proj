@@ -1,10 +1,12 @@
-﻿[project]
+[project]
 name = "control-algorithm-proj"
 version = "0.1.0"
 description = "Control algorithm learning project with PID demos and state-space examples"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "casadi>=3.7.2",
+    "cvxpy>=1.8.1",
     "matplotlib>=3.10.8",
     "numpy>=2.4.3",
     "scipy>=1.17.1",
