@@ -1,3 +1,12 @@
+---
+source_type: repo
+created_at: 2026-04-16
+topics:
+  - control-algorithms
+status: inbox
+title: AGENTS
+---
+
 ﻿# AGENTS.md
 
 本文件定义 Codex 在本仓库协作开发时必须遵循的规范。

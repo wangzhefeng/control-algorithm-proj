@@ -1,3 +1,12 @@
+---
+source_type: repo
+created_at: 2026-04-16
+topics:
+  - control-algorithms
+status: inbox
+title: control-algorithm-proj README
+---
+
 ﻿# Control Algorithm Project
 
 用于学习控制算法（当前聚焦 PID、MPC 与 LQR 示例）的实验仓库。
